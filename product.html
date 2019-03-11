@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)http://localhost:8080/inventory-management-system-in-php-with-ajax-jquery/product.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Inventory Management System</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">	
+		<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+	</head>
+	<body style="">
+		<br>
+		<div class="container">
+			<h2 align="center">Inventory Management System</h2>
+
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="" class="navbar-brand">Home</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><a href="">User</a></li>
+						<li><a href="">Category</a></li>
+						<li><a href="">Brand</a></li>
+						<li><a href="">Product</a></li>
+						<li><a href="">Order</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="http://localhost:8080/inventory-management-system-in-php-with-ajax-jquery/product.php#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count"></span> Mark Parker</a>
+							<ul class="dropdown-menu">
+								<li><a href="">Profile</a></li>
+								<li><a href="">Logout</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+			</nav>
+			        <span id="alert_action"></span>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+                    <div class="panel-heading">
+                    	<div class="row">
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-6">
+                            	<h3 class="panel-title">Product List</h3>
+                            </div>
+                        
+                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" align="right">
+                                <button type="button" name="add" id="add_button" class="btn btn-success btn-xs" onclick="location.href='add.html'">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row"><div class="col-sm-12 table-responsive">
+                            <div id="product_data_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+							<div class="row">
+							<div class="col-sm-6">
+							<div class="dataTables_length" id="product_data_length">
+							<label>Show <select name="product_data_length" aria-controls="product_data" class="form-control input-sm">
+							<option value="10">10</option>
+							<option value="25">25</option>
+							<option value="50">50</option>
+							<option value="100">100</option></select> entries</label></div></div>
+							<div class="col-sm-6">
+							<div id="product_data_filter" class="dataTables_filter">
+							<label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="product_data"></label></div></div></div>
+							<div class="row"><div class="col-sm-12"><table id="product_data" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="product_data_info" style="width: 1106px;">
+                                <thead><tr role="row">
+								<th class="sorting" tabindex="0" aria-controls="product_data" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending" style="width: 26px;">ID</th><th class="sorting" tabindex="0" aria-controls="product_data" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending" style="width: 111px;">Category</th><th class="sorting" tabindex="0" aria-controls="product_data" rowspan="1" colspan="1" aria-label="Brand: activate to sort column ascending" style="width: 60px;">Brand</th><th class="sorting" tabindex="0" aria-controls="product_data" rowspan="1" colspan="1" aria-label="Product Name: activate to sort column ascending" style="width: 180px;">Product Name</th><th class="sorting" tabindex="0" aria-controls="product_data" rowspan="1" colspan="1" aria-label="Quantity: activate to sort column ascending" style="width: 80px;">Quantity</th><th class="sorting" tabindex="0" aria-controls="product_data" rowspan="1" colspan="1" aria-label="Enter By: activate to sort column ascending" style="width: 81px;">Enter By</th><th class="sorting" tabindex="0" aria-controls="product_data" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 63px;">Status</th><th class="sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 51px;"></th><th class="sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 68px;"></th><th class="sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 63px;"></th></tr></thead>
+                            </div></div>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+
+

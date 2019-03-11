@@ -1,0 +1,56 @@
+
+<head>
+	<script src="css/bootstrap.min.js.tải xuống"></script>
+	<link rel="stylesheet" href="css/button.css" >
+			<link rel="stylesheet" href="css/bootstrap.min.css">	
+		<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+</head>
+<form  method="post"  enctype="multipart/form-data">
+	<div class="modal-body">
+		<div class="form-group">
+			<label>Select Category</label>
+			<select name="id_category" id="category_id" class="form-control" required="">
+				<option value="">Select Category</option>
+				<?php
+					foreach ($category as $value) {
+						echo '<option value="'.$value['id'].'">'.$value['name'].'</option>';
+					}
+				?>
+			</select>
+		</div>
+		<div class="form-group">
+			<label>Select Brand</label>
+			<select name="id_brand" id="brand_id" class="form-control" required="">
+				<option value="">Select Brand</option>
+				<?php
+					foreach ($brand as $value) {
+						echo '<option value="'.$value['id'].'">'.$value['name'].'</option>';
+					}
+				?>
+			</select>
+		</div>
+		<div class="form-group">
+			<label>Product Name</label>
+			<input type="text" name="product_name" id="product_name" class="form-control" required="">
+		</div>
+		<div class="form-group">
+			<label>Product Description</label>
+			<textarea name="product_description" id="product_description" class="form-control" rows="5" required=""></textarea>
+		</div>
+		<div class="form-group">
+			<label>Product Quantity</label>
+			<input type="text" name="product_quantity" id="product_quantity" class="form-control" required="" pattern="[+-]?([0-9]*[.])?[0-9]+"> 
+		</div>
+		<div class="form-group">
+			<label>Product Price</label>
+			<input type="text" name="product_price" id="product_base_price" class="form-control" required="" pattern="[+-]?([0-9]*[.])?[0-9]+">
+		</div>
+		<div class="form-group">
+			<label>Select a image</label>
+			<input type="file" name="product_image" accept="image/*">
+		</div>
+	</div>
+	<div class="form-group" style="float:right;padding: 20px;">
+		<input type="submit" name="add_product" value="Add Product" class="btn btn-info"/>
+	</div>
+</form>
