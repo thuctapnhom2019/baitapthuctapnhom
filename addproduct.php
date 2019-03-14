@@ -30,7 +30,6 @@
 		$file_name_attached = $name_edit .'.'. $file_type;
 		$save_to = 'images/' . $file_name_attached;
 		move_uploaded_file($file_tmp_name, $save_to);
-	// echo'<pre>';print_r($product_image);die;
 		$sql_insert = 'INSERT INTO `product`(`name`, `category`, `brand`, `description`,
 		`quantity`, `price`, `image`) VALUES ("'.$product_name.'",
 		"'.$id_category.'","'.$id_brand.'","'.$product_description.'","'.$product_quantity.'","'.$product_price.'","'.$product_image.'")';
