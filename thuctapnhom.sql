@@ -108,8 +108,8 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`id`, `name`, `category`, `brand`, `description`, `quantity`, `price`, `image`) VALUES
 (1, 'aaa', 1, 1, 'kk', 1, 12, 'logo.png'),
-(2, 'aaa', 2, 1, 'kk', 1, 12, 'logo.png'),
-(3, 'aaa', 2, 1, 'kk', 1, 12, 'logo.png');
+(2, 'bbb', 2, 1, 'kk', 1, 12, 'logo.png'),
+(3, 'ccc', 2, 1, 'kk', 1, 12, 'logo.png');
 
 --
 -- Chỉ mục cho các bảng đã đổ

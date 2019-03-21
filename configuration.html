@@ -1,0 +1,49 @@
+
+<head>
+	<script src="css/bootstrap.min.js.tải xuống"></script>
+	<link rel="stylesheet" href="css/button.css" >
+			<link rel="stylesheet" href="css/bootstrap.min.css">	
+		<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+</head>
+<form  method="post"  enctype="multipart/form-data">
+	<div class="modal-body">
+		<div class="form-group" style="text-align:center">
+			<h1>Bảng thống kê kho</h1>
+			
+		</div>
+		
+	<div style="float: right;border: 1px solid #000;border-radius: 50%;width: 23px;text-align: center;height: 23px;margin-bottom: 15px;">
+		<a href="addproduct.php" style="text-decoration:none !important;">+</a>
+	</div>
+	<table class="table" style="border: 1px solid #ddd;">
+		<thead>
+			<tr>
+				<th>Image</th>
+				<th>Name</th>
+				<th>Category</th>
+				<th>Brand</th>
+				<th>Quantity</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				foreach ($product as $value) {
+			?>
+					<tr>
+			<?php
+						echo '<td><img src="/html_nhom/images/'.$value['image'].'" alt="" height="" width=""></td>';
+						echo '<td>'.$value['name'].'</td>';
+						echo '<td>'.$value['name_category'].'</td>';
+						echo '<td>'.$value['name_brand'].'</td>';
+						echo '<td>'.$value['quantity'].'</td>';
+						echo '<td>'.$value['price'].'</td>';
+			?>
+					</tr>
+			<?php
+				}
+			?>
+			
+		</tbody>
+	</table>
+</form>
